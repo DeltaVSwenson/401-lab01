@@ -2,8 +2,8 @@ LAB - 01
 Project 01
 Author: Jacob Swenson
 Links and Resources
-submission PR
-travis
+submission PR: https://github.com/DeltaVSwenson/401-lab01/pull/1
+travis: https://travis-ci.com/TheSwenson/cr-js-401d4
 back-end (when applicable)
 front-end (when applicable)
 Documentation
@@ -31,6 +31,7 @@ Endpoint: /bing/zing/
 Returns a JSON object with xyz in it.
 Tests
 How do you run tests?
+    NPM test 
 What assertions were made?
 What assertions need to be / should be made?
 UML
