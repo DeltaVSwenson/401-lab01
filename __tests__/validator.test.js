@@ -22,23 +22,78 @@ describe('validator module performs basic validation of', () => {
   });
 
   it('numbers', () => {
-    expect(true).toBeFalsy();
+    let str = 'yes';
+    let num = 1;
+    let arr = ['a'];
+    let obj = {x:'y'};
+    let func = () => {};
+    let bool = false;
+    expect(validator.isInt(str)).toBeFalsy();
+    expect(validator.isInt(num)).toBeTruthy();
+    expect(validator.isInt(arr)).toBeFalsy();
+    expect(validator.isInt(obj)).toBeFalsy();
+    expect(validator.isInt(func)).toBeFalsy();
+    expect(validator.isInt(bool)).toBeFalsy();
   });
 
   it('arrays', () => {
-    expect(true).toBeFalsy();
+    let str = 'yes';
+    let num = 1;
+    let arr = ['a'];
+    let obj = {x:'y'};
+    let func = () => {};
+    let bool = false;
+    expect(validator.isArr(str)).toBeFalsy();
+    expect(validator.isArr(num)).toBeFalsy();
+    expect(validator.isArr(arr)).toBeTruthy();
+    expect(validator.isArr(obj)).toBeFalsy();
+    expect(validator.isArr(func)).toBeFalsy();
+    expect(validator.isArr(bool)).toBeFalsy();
   });
 
   it('objects', () => {
-    expect(true).toBeFalsy();
+    let str = 'yes';
+    let num = 1;
+    let arr = ['a'];
+    let obj = {x:'y'};
+    let func = () => {};
+    let bool = false;
+    expect(validator.isObj(str)).toBeFalsy();
+    expect(validator.isObj(num)).toBeFalsy();
+    expect(validator.isObj(arr)).toBeFalsy();
+    expect(validator.isObj(obj)).toBeTruthy();
+    expect(validator.isObj(func)).toBeFalsy();
+    expect(validator.isObj(bool)).toBeFalsy();
   });
 
   it('booleans', () => {
-    expect(true).toBeFalsy();
+    let str = 'yes';
+    let num = 1;
+    let arr = ['a'];
+    let obj = {x:'y'};
+    let func = () => {};
+    let bool = false;
+    expect(validator.isBoo(str)).toBeFalsy();
+    expect(validator.isBoo(num)).toBeFalsy();
+    expect(validator.isBoo(arr)).toBeFalsy();
+    expect(validator.isBoo(obj)).toBeFalsy();
+    expect(validator.isBoo(func)).toBeFalsy();
+    expect(validator.isBoo(bool)).toBeTruthy();
   });
 
   it('functions', () => {
-    expect(true).toBeFalsy();
+    let str = 'yes';
+    let num = 1;
+    let arr = ['a'];
+    let obj = {x:'y'};
+    let func = () => {};
+    let bool = false;
+    expect(validator.isFunc(str)).toBeFalsy();
+    expect(validator.isFunc(num)).toBeFalsy();
+    expect(validator.isFunc(arr)).toBeFalsy();
+    expect(validator.isFunc(obj)).toBeFalsy();
+    expect(validator.isFunc(func)).toBeTruthy();
+    expect(validator.isFunc(bool)).toBeFalsy();
   });
 
 });
